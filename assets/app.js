@@ -44,3 +44,28 @@ async function downloadStatistics() {
   }
 }
 downloadStatistics();
+
+const featureTrack = document.getElementById('feature-track');
+if (featureTrack) {
+  const previous = document.getElementById('features-previous');
+  const next = document.getElementById('features-next');
+  const updateControls = () => {
+    previous.disabled = featureTrack.scrollLeft <= 2;
+    next.disabled = featureTrack.scrollLeft + featureTrack.clientWidth >= featureTrack.scrollWidth - 2;
+  };
+  const move = direction => {
+    const card = featureTrack.querySelector('.feature-card');
+    const gap = parseFloat(getComputedStyle(featureTrack).columnGap) || 0;
+    featureTrack.scrollBy({ left: direction * (card.getBoundingClientRect().width + gap),
+      behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+  };
+  previous.addEventListener('click', () => move(-1));
+  next.addEventListener('click', () => move(1));
+  featureTrack.addEventListener('scroll', updateControls, { passive: true });
+  featureTrack.addEventListener('keydown', event => {
+    if (event.target !== featureTrack || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+    event.preventDefault(); move(event.key === 'ArrowRight' ? 1 : -1);
+  });
+  window.addEventListener('resize', updateControls);
+  updateControls();
+}

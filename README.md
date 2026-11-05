@@ -96,25 +96,18 @@ Lo storico inizia il **5 novembre 2026**. Il totale iniziale comprende i downloa
 
 Per raccogliere manualmente i dati: `node scripts/download-stats.cjs`. Per i test: `node --test scripts/download-stats.test.cjs`. La raccolta completa tutte le pagine e valida i valori prima di sostituire i file; se GitHub non risponde conserva quelli precedenti. Il browser mostra un messaggio di indisponibilità in caso di dati assenti o non validi, mantenendo disponibile il link dell’APK.
 
-## Grafico pubblico e materiali promozionali
+## Grafico pubblico dei download
 
 La sezione `#numeri` presenta un grafico interattivo dei download: barre per versione e vista temporale dei totali cumulativi osservati. Il primo punto è il totale iniziale, non i download di quel giorno. Con una sola rilevazione non viene disegnata una crescita. La vista temporale conserva i giorni effettivamente osservati e le eventuali diminuzioni dovute a rimozioni di APK, senza inventare valori intermedi. I dati sono consultabili anche in una tabella accessibile e nel CSV. Non si raccolgono nuovi dati personali.
 
 `assets/insights-model.js` contiene l’aggregazione verificata da `node --test scripts/insights-model.test.cjs`. `assets/insights.js` disegna i grafici con SVG e HTML nativi, senza librerie remote. Se i dati non sono disponibili il download dell’app resta utilizzabile.
 
-La prima campagna è preparata in [marketing/CAMPAGNA-LANCIO.md](marketing/CAMPAGNA-LANCIO.md): post Facebook, testo breve, storyboard e proposta per la prima settimana. La clip [assets/promo/spesafacile-android.mp4](assets/promo/spesafacile-android.mp4) è verticale 1080×1920, dura circa 14,5 secondi ed è senza audio. Usa schermate reali, grafica originale e transizioni; non è un filmato generato da un servizio esterno di AI. Il poster è `assets/promo/spesafacile-poster.png`. Per rigenerarla, usare `scripts/render-promo.cjs` con Playwright e ffmpeg disponibili.
-
 Le recensioni sono state rimandate su richiesta del titolare: la landing non include moduli, stelle di valutazione o servizi esterni per i commenti. Nessun commento o giudizio dimostrativo viene presentato come recensione reale. Nessuna campagna è stata pubblicata sui social e nessun budget pubblicitario è stato speso.
 
-## Otto immagini e post social abbinati
+## Immagini delle funzioni nella landing
 
-La serie in `assets/social-campaign/` contiene otto immagini 1080×1350 dedicate a regalo/presentazione, creazione delle liste, quantità e spunte, prodotti abituali, budget, temi colore, condivisione e download. Le interfacce mostrate sono schermate reali con dati dimostrativi; il testo distingue il budget stimato e l’invio di copie dalla sincronizzazione in tempo reale.
+La sezione `#funzioni` presenta otto schede affiancate e scorrevoli con schermate reali dell’app e istruzioni: presentazione, creazione delle liste, quantità e spunte, prodotti abituali, budget, colori, condivisione e download. Si naviga con scorrimento, pulsanti e frecce da tastiera. Le immagini in `assets/features/` sono adattate alla presentazione dell’app, senza rimandi a post social o pacchetti da scaricare.
 
-- [Galleria con immagini e pulsanti per copiare i post](assets/social-campaign/index.html).
-- [ZIP con otto immagini, didascalie, testi alternativi e istruzioni](assets/social-campaign/SpesaFacile-post-social.zip).
-- [Anteprima delle otto immagini](assets/social-campaign/anteprima-post.png).
-- [Tutti i testi pronti e didascalia unica del carosello](marketing/POST-SOCIAL-PRONTI.md).
+Le fonti grafiche sono `scripts/feature-slides.json` e `scripts/render-feature-slides.cjs`; il generatore produce soltanto PNG. Per usarlo occorrono Playwright e, se necessario, le variabili `PLAYWRIGHT_PATH` e `CHROMIUM_PATH` per le installazioni locali.
 
-Ogni PNG ha un TXT con lo stesso nome: contiene il post Facebook completo di link, la variante Instagram e il testo alternativo. La variante Instagram presuppone che il titolare imposti il link della landing nella bio. Il file `LEGGIMI-E-POST.md` incluso nello ZIP spiega l’ordine e contiene il testo unico per un carosello. La galleria è separata dalla landing: non ripristina la sezione pubblica del kit rimossa in precedenza.
-
-La fonte dei contenuti è `marketing/social-posts.json`. Per rigenerare PNG, testi e galleria usare `node scripts/render-social-campaign.cjs` con Playwright disponibile; le variabili `PLAYWRIGHT_PATH` e `CHROMIUM_PATH` consentono di usare installazioni locali. Ricreare poi lo ZIP con PNG, TXT e Markdown della cartella, escludendo l’archivio stesso. Nessun contenuto viene pubblicato sui social da questi script.
+I testi per i social, i relativi archivi e i materiali promozionali da consegnare al titolare restano fuori dai file correnti della repository e del sito. Non creare gallerie pubbliche o pacchetti social nella landing: questi materiali vanno forniti in chat. Il controllo del sito impedisce la reintroduzione delle precedenti cartelle pubbliche dedicate ai post.

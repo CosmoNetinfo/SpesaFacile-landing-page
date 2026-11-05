@@ -1,0 +1,124 @@
+{
+  "slides": [
+    {
+      "id": "presentazione",
+      "topic": "Presentazione dell’app gratuita",
+      "eyebrow": "UN PICCOLO REGALO, PER TUTTI I GIORNI",
+      "title": "La spesa è tua.<br><em>L’app te la regaliamo.</em>",
+      "subtitle": "SpesaFacile: il blocco digitale per organizzare quello che serve.",
+      "layout": "gift",
+      "screen": "notebook-dark.png",
+      "points": [
+        "Liste sul telefono",
+        "Prodotti abituali e budget",
+        "Gratis per Android"
+      ],
+      "alt": "Presentazione di SpesaFacile, gratuita per Android, con una schermata reale della home scura: riepilogo delle liste e avanzamento della spesa."
+    },
+    {
+      "id": "liste",
+      "topic": "Creare una lista",
+      "eyebrow": "UNA LISTA PER OGNI OCCASIONE",
+      "title": "La settimana.<br><em>La cena. La tua lista.</em>",
+      "subtitle": "Tocca Nuova lista, scegli un nome e comincia da quello che manca.",
+      "layout": "dialog-list",
+      "screen": "notebook-home.png",
+      "points": [
+        "Dai un nome alla lista",
+        "Aggiungi i prodotti",
+        "Ritrova tutto nella home"
+      ],
+      "alt": "Home reale di SpesaFacile affiancata alla finestra Nuova lista, con il campo per scrivere il nome. Tre passaggi spiegano come iniziare."
+    },
+    {
+      "id": "spunte",
+      "topic": "Prodotti, quantità e spunte",
+      "eyebrow": "TRA GLI SCAFFALI, UN GESTO ALLA VOLTA",
+      "title": "Scrivi. Prendi.<br><em>Spunta.</em>",
+      "subtitle": "Concentrati su quello che manca. Quello che hai già preso ha la sua spunta.",
+      "layout": "shopping",
+      "screen": "notebook-shopping.png",
+      "points": [
+        "Inserisci nome e quantità",
+        "Organizza per reparto",
+        "Spunta gli acquisti"
+      ],
+      "alt": "Lista reale della spesa con latte e mele, quantità, prezzi e caselle da spuntare. Il testo evidenzia inserimento, reparti e acquisti."
+    },
+    {
+      "id": "prodotti",
+      "topic": "Prodotti abituali e preferiti",
+      "eyebrow": "LE COSE CHE COMPRI PIÙ SPESSO",
+      "title": "Le buone abitudini.<br><em>Senza riscriverle.</em>",
+      "subtitle": "Latte, pane, caffè: ritrova i tuoi prodotti e aggiungili a una lista.",
+      "layout": "dialog-product",
+      "screen": "notebook-products-1.3.1.png",
+      "points": [
+        "Crea un prodotto abituale",
+        "Ritrovalo con la ricerca",
+        "Tieni i preferiti con una stella"
+      ],
+      "alt": "Schermata reale Prodotti abituali e finestra per crearne uno nuovo, con campi nome e unità e indicazione dell’aggiunta ai preferiti."
+    },
+    {
+      "id": "budget",
+      "topic": "Prezzi e budget",
+      "eyebrow": "UN OCCHIO ALLA LISTA, UNO AL BUDGET",
+      "title": "Sai cosa manca.<br><em>Vedi quanto resta.</em>",
+      "subtitle": "Inserisci i prezzi e confronta il totale stimato con il budget della lista.",
+      "layout": "budget",
+      "screen": "notebook-shopping.png",
+      "points": [
+        "Scegli un budget per la lista",
+        "Aggiungi prezzi e quantità",
+        "Controlla la stima della spesa"
+      ],
+      "alt": "Schermata reale della lista con budget di 25 euro, totale stimato di 2,84 euro e 22,16 euro rimanenti. I valori sono dati dimostrativi."
+    },
+    {
+      "id": "colori",
+      "topic": "Temi colore e aspetto",
+      "eyebrow": "UN BLOCCO NOTES CHE SOMIGLIA A TE",
+      "title": "La tua spesa.<br><em>Il tuo colore.</em>",
+      "subtitle": "Arancio, salvia, azzurro o rosa. Anche con l’aspetto chiaro o scuro.",
+      "layout": "themes",
+      "screen": "notebook-salvia-1.3.2.png",
+      "points": [
+        "Apri Il mio blocco",
+        "Scegli colore e aspetto",
+        "La preferenza resta salvata"
+      ],
+      "alt": "Confronto tra due schermate reali di SpesaFacile, una salvia chiara e una scura. Quattro campioni mostrano Arancio, Salvia, Azzurro e Rosa."
+    },
+    {
+      "id": "condivisione",
+      "topic": "Condivisione tramite link",
+      "eyebrow": "DA UN BLOCCO ALL’ALTRO",
+      "title": "La lista è pronta.<br><em>Passala a chi va.</em>",
+      "subtitle": "Condividi un link: chi lo riceve può aprire e salvare una copia nell’app.",
+      "layout": "share",
+      "screen": "notebook-share.png",
+      "points": [
+        "Apri la lista e condividi il link",
+        "Invialo a chi fa la spesa",
+        "Il destinatario salva una copia"
+      ],
+      "alt": "Schermata reale di importazione di una lista condivisa, chiamata Cena in famiglia, con un prodotto e il pulsante Salva e apri la lista."
+    },
+    {
+      "id": "scarica",
+      "topic": "Invito al download",
+      "eyebrow": "IL FOGLIETTO PUÒ RESTARE A CASA",
+      "title": "Un pensiero in meno.<br><em>Da oggi, in tasca.</em>",
+      "subtitle": "Scopri SpesaFacile: gratuita per uso personale e domestico, su Android.",
+      "layout": "download",
+      "screen": "notebook-shopping.png",
+      "points": [
+        "Liste, quantità e prodotti abituali",
+        "Prezzi, budget e backup",
+        "Quattro colori e link da condividere"
+      ],
+      "alt": "Invito a scoprire SpesaFacile, con l’icona del carrello su carta, una schermata reale della lista e il riepilogo delle funzioni incluse."
+    }
+  ]
+}

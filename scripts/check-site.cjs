@@ -1,6 +1,9 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const html = fs.readFileSync('index.html', 'utf8');
+for (const privateMaterials of ['assets/social-campaign', 'assets/promo', 'marketing']) {
+  if (fs.existsSync(privateMaterials)) throw new Error(`Social materials must be delivered privately, not published: ${privateMaterials}`);
+}
 const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
 if (new Set(ids).size !== ids.length) throw new Error('Duplicate HTML IDs');
 for (const match of html.matchAll(/(?:src|href)="([^"#]+|#[^"]+)"/g)) {

@@ -73,3 +73,11 @@ La cartella condividi/ contiene un’anteprima senza backend dei collegamenti de
 La licenza di app e landing è proprietaria (LICENSE). I materiali originali del kit, conservati in assets/press-kit, restano disponibili separatamente e non hanno una sezione nella landing.
 
 La release 1.3.1 uniforma i dialoghi e i menu al tema blocco notes. La landing riporta la versione pubblicata e include un’anteprima della finestra prodotto aggiornata.
+
+## Studio delle icone e dei temi
+
+La sezione `#stile` presenta quattro proposte vettoriali per l’icona Android e indica D, il carrello classico su carta a righe, come scelta definitiva. Quattro mockup illustrativi mostrano i colori Arancio, Salvia, Azzurro e Rosa. Queste anteprime sono separate dalle schermate reali dell’app e accompagnate dallo stato della versione che le introduce.
+
+Le risorse locali sono in `assets/design/`: SVG delle icone, PNG dei singoli temi e tavola completa `studio-icone-temi.png`. Le griglie mostrano quattro schede affiancate su desktop e due su telefono. Non viene ripristinata la sezione del kit di presentazione.
+
+La versione 1.3.2 introduce le quattro palette selezionabili e l’icona D. Le schermate reali `notebook-settings-1.3.2.png` e `notebook-salvia-1.3.2.png` provengono dai test Android e mostrano rispettivamente il selettore dei colori e la home salvia. Le FAQ spiegano anche il percorso di aggiornamento dal browser per chi incontra errori nelle versioni precedenti.

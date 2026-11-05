@@ -2,6 +2,10 @@
 
 Materiali preparati per la revisione del titolare. Nessuna inserzione acquistata e nessun post pubblicato automaticamente.
 
+## Serie pronta: immagini e post
+
+Sono disponibili **otto immagini 1080×1350 con testi abbinati**, utilizzabili come post singoli o carosello. Apri la [galleria](../assets/social-campaign/index.html), scarica il [pacchetto ZIP](../assets/social-campaign/SpesaFacile-post-social.zip) oppure consulta [POST-SOCIAL-PRONTI.md](POST-SOCIAL-PRONTI.md). Ogni immagine ha una didascalia Facebook con link, una versione Instagram e un testo alternativo. Per un carosello usa la didascalia unica inclusa, anziché incollare tutti gli otto post insieme.
+
 ## Messaggio
 
 SpesaFacile è il tuo blocco digitale per la spesa: liste, prodotti abituali, preferiti, quantità e budget, senza account per gestire le liste. Gratuita per uso personale e domestico; disponibile per Android 8.0 o successivo. Non è disponibile per iPhone. Il codice mantiene la licenza proprietaria.

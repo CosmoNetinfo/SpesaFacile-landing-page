@@ -105,3 +105,16 @@ La sezione `#numeri` presenta un grafico interattivo dei download: barre per ver
 La prima campagna è preparata in [marketing/CAMPAGNA-LANCIO.md](marketing/CAMPAGNA-LANCIO.md): post Facebook, testo breve, storyboard e proposta per la prima settimana. La clip [assets/promo/spesafacile-android.mp4](assets/promo/spesafacile-android.mp4) è verticale 1080×1920, dura circa 14,5 secondi ed è senza audio. Usa schermate reali, grafica originale e transizioni; non è un filmato generato da un servizio esterno di AI. Il poster è `assets/promo/spesafacile-poster.png`. Per rigenerarla, usare `scripts/render-promo.cjs` con Playwright e ffmpeg disponibili.
 
 Le recensioni sono state rimandate su richiesta del titolare: la landing non include moduli, stelle di valutazione o servizi esterni per i commenti. Nessun commento o giudizio dimostrativo viene presentato come recensione reale. Nessuna campagna è stata pubblicata sui social e nessun budget pubblicitario è stato speso.
+
+## Otto immagini e post social abbinati
+
+La serie in `assets/social-campaign/` contiene otto immagini 1080×1350 dedicate a regalo/presentazione, creazione delle liste, quantità e spunte, prodotti abituali, budget, temi colore, condivisione e download. Le interfacce mostrate sono schermate reali con dati dimostrativi; il testo distingue il budget stimato e l’invio di copie dalla sincronizzazione in tempo reale.
+
+- [Galleria con immagini e pulsanti per copiare i post](assets/social-campaign/index.html).
+- [ZIP con otto immagini, didascalie, testi alternativi e istruzioni](assets/social-campaign/SpesaFacile-post-social.zip).
+- [Anteprima delle otto immagini](assets/social-campaign/anteprima-post.png).
+- [Tutti i testi pronti e didascalia unica del carosello](marketing/POST-SOCIAL-PRONTI.md).
+
+Ogni PNG ha un TXT con lo stesso nome: contiene il post Facebook completo di link, la variante Instagram e il testo alternativo. La variante Instagram presuppone che il titolare imposti il link della landing nella bio. Il file `LEGGIMI-E-POST.md` incluso nello ZIP spiega l’ordine e contiene il testo unico per un carosello. La galleria è separata dalla landing: non ripristina la sezione pubblica del kit rimossa in precedenza.
+
+La fonte dei contenuti è `marketing/social-posts.json`. Per rigenerare PNG, testi e galleria usare `node scripts/render-social-campaign.cjs` con Playwright disponibile; le variabili `PLAYWRIGHT_PATH` e `CHROMIUM_PATH` consentono di usare installazioni locali. Ricreare poi lo ZIP con PNG, TXT e Markdown della cartella, escludendo l’archivio stesso. Nessun contenuto viene pubblicato sui social da questi script.

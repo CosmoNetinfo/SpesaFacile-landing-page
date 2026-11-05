@@ -7,7 +7,7 @@ for (const match of html.matchAll(/(?:src|href)="([^"#]+|#[^"]+)"/g)) {
   const value = match[1];
   if (value.startsWith('#')) {
     if (!ids.includes(value.slice(1))) throw new Error(`Missing anchor: ${value}`);
-  } else if (!/^[a-z]+:/i.test(value) && !fs.existsSync(path.resolve(value))) {
+  } else if (!/^[a-z]+:/i.test(value) && !fs.existsSync(path.resolve(value.split(/[?#]/)[0]))) {
     throw new Error(`Missing local resource: ${value}`);
   }
 }

@@ -15,7 +15,10 @@
   <link rel="canonical" href="https://cosmonetinfo.github.io/SpesaFacile-landing-page/">
   <link rel="icon" href="assets/logo.png" type="image/png">
   <link rel="stylesheet" href="assets/style.css?v=20261105-downloads">
+  <link rel="stylesheet" href="assets/community.css?v=20261105-1">
   <script src="assets/app.js?v=20261105-downloads" defer></script>
+  <script src="assets/insights-model.js?v=20261105-1" defer></script>
+  <script src="assets/insights.js?v=20261105-1" defer></script>
 </head>
 <body>
 <a class="skip" href="#contenuto">Vai al contenuto</a>
@@ -106,6 +109,15 @@
     <div><p class="eyebrow">LA PROSSIMA SPESA INIZIA QUI.</p><h2>Porta la lista.<br><span class="serif">Lascia i pensieri.</span></h2><p>SpesaFacile è un progetto Android di CosmoNet.info.<br>Il codice è consultabile su GitHub.</p></div>
     <div class="download-panel"><p class="download-platform">PER ANDROID 8.0 E SUCCESSIVI</p><a class="button button-light" href="https://github.com/CosmoNetinfo/SpesaFacile/releases/latest" target="_blank" rel="noopener noreferrer">Scarica da GitHub <span aria-hidden="true">↗</span></a><p class="release-label" id="release-label">Vai all’ultima versione disponibile</p><div class="download-statistics"><p id="download-count" aria-live="polite">Conteggio download in caricamento…</p><p id="download-updated"></p><p>Scaricamenti di tutte le versioni stabili, inclusi gli aggiornamenti. Non indica persone o installazioni uniche.</p></div><p class="install-note">Nella pagina della release, apri “Assets” e scegli l’APK. Android potrebbe chiederti di autorizzare l’installazione dal browser. L’app non è distribuita tramite questa pagina sul Play Store.</p></div>
   </div></section>
+  <section class="community-section wrap" id="numeri" aria-labelledby="numbers-title">
+    <div class="community-heading"><div><p class="eyebrow">UN PICCOLO PROGETTO, PASSO DOPO PASSO.</p><h2 id="numbers-title">Ogni download.<br><span class="serif">Un nuovo inizio.</span></h2></div><p>SpesaFacile è gratuita per uso personale e domestico e, per ora, disponibile solo su Android. Qui raccontiamo i suoi download con i dati pubblici di GitHub.</p></div>
+    <div class="insights-card">
+      <div class="insights-overview"><p class="eyebrow">DOWNLOAD COMPLESSIVI</p><strong id="chart-total">—</strong><p>di tutti gli APK nelle release stabili</p><small id="chart-asof">In attesa della rilevazione</small><a href="assets/data/download-history.csv">Scarica lo storico CSV ↗</a></div>
+      <div class="insights-plot"><div class="chart-switch" role="group" aria-label="Vista del grafico"><button type="button" data-chart-view="versions" aria-pressed="true" disabled>Per versione</button><button type="button" data-chart-view="history" aria-pressed="false" disabled>Nel tempo</button></div><div id="downloads-chart" aria-live="polite">Caricamento del grafico…</div><p id="chart-note" class="community-note"></p></div>
+    </div>
+    <details class="chart-data"><summary>Consulta i dati del grafico</summary><table><thead><tr><th id="chart-column" scope="col">Versione</th><th scope="col">Download cumulativi</th></tr></thead><tbody id="chart-data-body"></tbody></table></details>
+    <p class="community-note">I download non equivalgono a persone o installazioni uniche: includono aggiornamenti, tentativi ripetuti e verifiche tecniche. Lo storico giornaliero inizia il 5 novembre 2026.</p>
+  </section>
 <section class="faq wrap"><div><p class="eyebrow">DUE COSE UTILI DA SAPERE.</p><h2>Prima di partire.</h2></div><div class="faq-list">
     <details><summary>Serve una connessione per fare la spesa?</summary><p>Le liste sono salvate localmente nel database dell’app. Puoi gestirle senza connessione; il controllo degli aggiornamenti e il download delle release richiedono Internet.</p></details>
     <details><summary>Devo registrarmi?</summary><p>No. L’app non richiede un account. Le liste restano sul dispositivo; non è prevista una sincronizzazione familiare in tempo reale.</p></details>

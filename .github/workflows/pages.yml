@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: '22'
       - name: Test download statistics
-        run: node --test scripts/download-stats.test.cjs
+        run: node --test scripts/download-stats.test.cjs scripts/insights-model.test.cjs
       - name: Record APK download counts
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

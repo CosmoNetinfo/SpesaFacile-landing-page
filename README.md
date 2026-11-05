@@ -81,3 +81,17 @@ La sezione `#stile` presenta quattro proposte vettoriali per l’icona Android e
 Le risorse locali sono in `assets/design/`: SVG delle icone, PNG dei singoli temi e tavola completa `studio-icone-temi.png`. Le griglie mostrano quattro schede affiancate su desktop e due su telefono. Non viene ripristinata la sezione del kit di presentazione.
 
 La versione 1.3.2 introduce le quattro palette selezionabili e l’icona D. Le schermate reali `notebook-settings-1.3.2.png` e `notebook-salvia-1.3.2.png` provengono dai test Android e mostrano rispettivamente il selettore dei colori e la home salvia. Le FAQ spiegano anche il percorso di aggiornamento dal browser per chi incontra errori nelle versioni precedenti.
+
+## Conteggio e storico dei download
+
+Il contatore accanto al pulsante di download legge `assets/data/downloads.json`. Somma il campo `download_count` dei soli file APK caricati nelle release stabili pubblicate di `CosmoNetinfo/SpesaFacile`, escludendo bozze, prerelease, checksum e archivi sorgenti. Usa il conteggio di GitHub: non identifica chi scarica, non raccoglie IP e non misura persone, installazioni riuscite o utenti attivi. Include aggiornamenti, scaricamenti ripetuti e verifiche del manutentore.
+
+Il workflow Pages rileva i dati a ogni push su main, su avvio manuale e una volta al giorno alle **06:23 UTC** (07:23 in Italia in inverno, 08:23 in estate). GitHub può ritardare le esecuzioni programmate e può disabilitarle nei repository pubblici inattivi. Non occorrono nuove chiavi: il job usa il GITHUB_TOKEN del repository. Il job delle statistiche usa il permesso contents: write e committa soltanto i file in assets/data su main; il successivo job pubblica il sito con il commit aggiornato. Il push del bot non crea una catena ricorsiva di workflow. Se la raccolta fallisce, la pubblicazione usa i dati già presenti e il job delle statistiche segnala l’errore.
+
+- `assets/data/downloads.json`: ultimo totale osservato e conteggi per asset/versione.
+- `assets/data/download-history.json`: una rilevazione per giorno UTC; le esecuzioni successive dello stesso giorno aggiornano quella voce senza cancellare i giorni precedenti.
+- `assets/data/download-history.csv`: tabella con data UTC, istante della rilevazione, versione, ID del file, nome e conteggio cumulativo; utilizzabile per i futuri grafici.
+
+Lo storico inizia il **5 novembre 2026**. Il totale iniziale comprende i download precedenti, senza ricostruirne la distribuzione giornaliera. I grafici dovranno distinguere il primo valore dai nuovi download rilevati tra osservazioni. Giorni senza rilevazione non sono giorni con zero download. Se un APK viene eliminato o sostituito con un nuovo asset, il totale delle release attualmente disponibili può diminuire: lo storico conserva gli ID originali per riconoscere il cambiamento. Non interpretare una diminuzione come download negativi.
+
+Per raccogliere manualmente i dati: `node scripts/download-stats.cjs`. Per i test: `node --test scripts/download-stats.test.cjs`. La raccolta completa tutte le pagine e valida i valori prima di sostituire i file; se GitHub non risponde conserva quelli precedenti. Il browser mostra un messaggio di indisponibilità in caso di dati assenti o non validi, mantenendo disponibile il link dell’APK.

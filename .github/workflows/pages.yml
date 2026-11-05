@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: '23 6 * * *'
 permissions:
   contents: read
   pages: write
@@ -11,13 +13,43 @@ concurrency:
   group: pages
   cancel-in-progress: false
 jobs:
+  record-downloads:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test download statistics
+        run: node --test scripts/download-stats.test.cjs
+      - name: Record APK download counts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/download-stats.cjs
+      - name: Save daily statistics on main
+        run: |
+          git add assets/data
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "Record APK download statistics"
+          git push origin HEAD:main
   deploy:
+    needs: record-downloads
+    if: ${{ always() && !cancelled() }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: '22'

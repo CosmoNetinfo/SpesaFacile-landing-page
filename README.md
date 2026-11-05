@@ -71,3 +71,5 @@ Per un dominio personalizzato aggiorna anche URL canonico, Open Graph, `robots.t
 La cartella condividi/ contiene un’anteprima senza backend dei collegamenti dell’app. I dati sono nel frammento del link, decompressi con limite e mostrati come testo. Nessun dato della lista viene salvato sul sito. Il pulsante apre il deep link spesafacile://import nell’app 1.3+. Una nuova apertura dello stesso link riutilizza la copia locale. Non è una sincronizzazione in tempo reale.
 
 La licenza di app e landing è proprietaria (LICENSE). I materiali originali del kit, conservati in assets/press-kit, restano disponibili separatamente e non hanno una sezione nella landing.
+
+La release 1.3.1 uniforma i dialoghi e i menu al tema blocco notes. La landing riporta la versione pubblicata e include un’anteprima della finestra prodotto aggiornata.

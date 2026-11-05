@@ -4,7 +4,7 @@
 
 SpesaFacile è un’app Android in italiano per organizzare liste della spesa, prodotti e quantità, suddividerli per reparto e spuntare gli acquisti. Funziona con dati salvati sul telefono e senza un account.
 
-## Disponibile nella 1.3.0
+## Disponibile nella 1.3.1
 
 Home con riepilogo e avanzamento delle liste; liste multiple; widget interattivo; quantità decimali; prezzi facoltativi e totale stimato; duplicazione; condivisione testuale; tema chiaro e scuro.
 

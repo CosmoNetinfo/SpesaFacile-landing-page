@@ -4,13 +4,13 @@
 
 SpesaFacile è un’app Android in italiano per organizzare liste della spesa, prodotti e quantità, suddividerli per reparto e spuntare gli acquisti. Funziona con dati salvati sul telefono e senza un account.
 
-## Disponibile nella 1.2.0
+## Disponibile nella 1.3.0
 
 Home con riepilogo e avanzamento delle liste; liste multiple; widget interattivo; quantità decimali; prezzi facoltativi e totale stimato; duplicazione; condivisione testuale; tema chiaro e scuro.
 
-## In preparazione per la versione successiva
+## Funzioni della versione 1.3
 
-Stile blocco notes, navigazione tra Liste / Prodotti / Impostazioni, prodotti abituali e preferiti, backup, budget per lista, condivisione con link e aggiornamenti dall’app. Queste funzioni non sono ancora garantite nell’APK 1.2.0.
+Stile blocco notes, navigazione tra Liste / Prodotti / Impostazioni, prodotti abituali e preferiti, backup, budget per lista, condivisione con link e aggiornamenti dall’app. Le liste condivise sono copie; le modifiche successive si inviano con un nuovo link. Android richiede conferma per installare gli aggiornamenti.
 
 Sito: https://cosmonetinfo.github.io/SpesaFacile-landing-page/
 Download ufficiale: https://github.com/CosmoNetinfo/SpesaFacile/releases/latest

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cosmonetinfo.github.io/SpesaFacile-landing-page/sitemap.xml

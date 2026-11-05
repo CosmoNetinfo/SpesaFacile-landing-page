@@ -8,7 +8,7 @@ URL previsto: https://cosmonetinfo.github.io/SpesaFacile-landing-page/
 
 - Presentazione dell’app con palette arancione, crema e verde.
 - Demo illustrativa interattiva: spunte, avanzamento e ripristino. Non salva dati e non è l’app Android.
-- Descrizione delle funzioni disponibili e delle novità in preparazione per la 1.1, esplicitamente separate.
+- Descrizione delle funzioni della versione 1.1: widget interattivo, quantità decimali, prezzi, duplicazione e condivisione.
 - Pulsante all’ultima release GitHub, numero di versione caricato dall’API pubblica e fallback se la richiesta non riesce.
 - FAQ: funzionamento offline, account, compatibilità Android, segnalazioni e connessioni della pagina.
 - Metadati SEO, anteprima social, sitemap e layout responsive.
@@ -62,6 +62,6 @@ Se Pages non è abilitato o il relativo ambiente richiede un’approvazione, com
 
 Il link di download punta a `/releases/latest` per non dipendere dal nome dell’APK. Il numero della release è solo informativo: il download resta disponibile se l’API è irraggiungibile o limita le richieste.
 
-Le funzionalità 1.1 sono marcate **in preparazione**. Dopo che una release firmata con queste funzioni è pubblicata e verificata, aggiorna quel testo e le FAQ. Non dichiarare disponibili funzioni presenti soltanto su un ramo di sviluppo.
+La sezione novità presenta la versione 1.1 pubblicata su GitHub. Per gli aggiornamenti futuri, non dichiarare disponibili funzioni presenti soltanto su un ramo di sviluppo: attendi una release verificata.
 
 Per un dominio personalizzato aggiorna anche URL canonico, Open Graph, `robots.txt`, `sitemap.xml` e la configurazione Pages. Non è incluso un file `CNAME` perché non è stato specificato un dominio.

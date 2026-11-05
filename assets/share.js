@@ -1,8 +1,13 @@
 'use strict';
-(async()=>{
+let shareRequest = 0;
+async function renderSharedList(){
+ const request = ++shareRequest;
  const token=location.hash.slice(1);
  const status=document.getElementById('status');
  const button=document.getElementById('open-app');
+ document.getElementById('preview').hidden=true;
+ document.getElementById('list-items').replaceChildren();
+ button.removeAttribute('href');button.setAttribute('aria-disabled','true');
  try {
   if(!/^[A-Za-z0-9_-]{1,12000}$/.test(token)) throw Error('Il link non contiene una lista valida.');
   button.href='spesafacile://import?data='+token;
@@ -23,6 +28,7 @@
   for(const item of list.items) {
    if(typeof item.name!=='string'||!item.name.trim()||item.name.length>500||!Number.isFinite(item.quantity)||item.quantity<=0||item.quantity>1000000||typeof item.unit!=='string'||item.unit.length>20) throw Error('La lista contiene prodotti non validi.');
   }
+  if(request!==shareRequest)return;
   document.getElementById('list-name').textContent=list.name;
   document.getElementById('list-count').textContent=list.items.length+' prodotti · quantità e spunte incluse';
   for(const item of list.items){const row=document.createElement('li');row.textContent=(item.checked?'✓ ':'○ ')+item.name+' · '+String(item.quantity).replace('.',',')+' '+item.unit;document.getElementById('list-items').append(row);}
@@ -30,7 +36,10 @@
   button.removeAttribute('aria-disabled');
   status.textContent='Apri l’app per salvare questa lista sul tuo telefono.';
  } catch(error) {
+  if(request!==shareRequest)return;
   button.removeAttribute('href');button.setAttribute('aria-disabled','true');
   status.textContent=error.message&&error.message.startsWith('La lista')?error.message:'Questo collegamento non contiene una lista valida. Chiedi a chi lo ha inviato di condividerlo di nuovo.';
  }
-})();
+}
+window.addEventListener('hashchange',renderSharedList);
+renderSharedList();

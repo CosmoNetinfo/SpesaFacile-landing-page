@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "repository": "CosmoNetinfo/SpesaFacile",
-  "date": "2026-11-05",
-  "observedAt": "2026-11-05T20:15:56.004Z",
-  "totalDownloads": 20,
+  "date": "2026-11-06",
+  "observedAt": "2026-11-06T14:23:28.984Z",
+  "totalDownloads": 21,
   "assets": [
     {
       "id": 448113524,
@@ -27,7 +27,7 @@
       "id": 712654744,
       "version": "v1.1.1",
       "name": "SpesaFacile-v1.1.1.apk",
-      "downloads": 2
+      "downloads": 3
     },
     {
       "id": 712907663,

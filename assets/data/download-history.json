@@ -221,6 +221,61 @@
           "downloads": 3
         }
       ]
+    },
+    {
+      "date": "2026-11-09",
+      "observedAt": "2026-11-09T16:32:02.060Z",
+      "totalDownloads": 21,
+      "assets": [
+        {
+          "id": 448113524,
+          "version": "v1.0.0",
+          "name": "app-debug.apk",
+          "downloads": 1
+        },
+        {
+          "id": 448113958,
+          "version": "v1.0.0",
+          "name": "SpesaFacile.apk",
+          "downloads": 1
+        },
+        {
+          "id": 448119981,
+          "version": "v1.0.0",
+          "name": "SpesaFacile-v1.0.0.apk",
+          "downloads": 2
+        },
+        {
+          "id": 712654744,
+          "version": "v1.1.1",
+          "name": "SpesaFacile-v1.1.1.apk",
+          "downloads": 3
+        },
+        {
+          "id": 712907663,
+          "version": "v1.2.0",
+          "name": "SpesaFacile-v1.2.0.apk",
+          "downloads": 3
+        },
+        {
+          "id": 713320100,
+          "version": "v1.3.0",
+          "name": "SpesaFacile-v1.3.0.apk",
+          "downloads": 4
+        },
+        {
+          "id": 713373071,
+          "version": "v1.3.1",
+          "name": "SpesaFacile-v1.3.1.apk",
+          "downloads": 4
+        },
+        {
+          "id": 713442117,
+          "version": "v1.3.2",
+          "name": "SpesaFacile-v1.3.2.apk",
+          "downloads": 3
+        }
+      ]
     }
   ]
 }
